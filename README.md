@@ -30,3 +30,6 @@ The model produces pixel-wise instance labels as a uint16 image with the same fo
 4) run "python main.py"
 5) The results will be available in "dwt/example/output".
 
+## Training the Model
+
+1) Will be available soon. 
