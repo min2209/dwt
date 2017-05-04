@@ -10,8 +10,8 @@ This page is still under construction.
 
 Developed and tested on Ubuntu 14.04 and 16.04. 
 
-TensorFlow www.tensorflow.org 
-Numpy, Scipy, and Skimage (sudo apt-get install python-numpy python-scipy python-skimage)
+1) TensorFlow www.tensorflow.org 
+2) Numpy, Scipy, and Skimage (sudo apt-get install python-numpy python-scipy python-skimage)
 
 ## Inputs
 
