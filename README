@@ -1,0 +1,5 @@
+Performs instance level segmentation detailed in the following paper: 
+
+Min Bai and Raquel Urtasun, Deep Watershed Transformation for Instance Segmentation, in CVPR 2017. Accessible at https://arxiv.org/abs/1611.08303. 
+
+
