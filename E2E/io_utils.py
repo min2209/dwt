@@ -4,7 +4,6 @@ import skimage.io
 import scipy.io as sio
 import scipy.misc
 import skimage.transform
-from scipy.misc import toimage
 
 np.random.seed(0)
 
