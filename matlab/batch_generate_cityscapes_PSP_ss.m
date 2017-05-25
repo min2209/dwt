@@ -1,11 +1,11 @@
 class = 'unified';
-set = 'test';
+set = 'val';
 
 keys = [13, 11, 12, 17, 18, 14, 15, 16];
 
-input_list_file = strcat('/ais/gobi4/mbai/instance_seg/cityscapes/splits/', set,'list.txt');
-output_dir = strcat('/ais/gobi4/mbai/instance_seg/cityscapes/unified/ssMaskFinePSP/', set);
-input_dir = '/media/mbai/Min_Data/PSPNet/evaluation/mc_result/cityscapes/test/gray';
+input_list_file = strcat('./cityscapes/splits/', set,'list.txt');
+output_dir = strcat('./cityscapes/unified/ssMaskFinePSP/', set);
+input_dir = './PSPNet/evaluation/mc_result/cityscapes/test/gray';
 
 
 fid = fopen(input_list_file);
