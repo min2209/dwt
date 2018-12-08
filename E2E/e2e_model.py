@@ -20,7 +20,7 @@ class Network:
             ss = tf.expand_dims(ss,-1)
             inputData = inputData * ss
 
-        inputData = tf.concat(3, [inputData, tf.expand_dims(ssMask,-1)])
+        inputData = tf.concat([inputData, tf.expand_dims(ssMask,-1)], 3)
 
         print "building direction net"
 
@@ -65,7 +65,7 @@ class Network:
         self.upscore4_3 = self._upscore_layer(self.fcn4_3, params=self._params["direction/upscore4_3"],
                                            shape=tf.shape(self.fcn3_3))
 
-        self.fuse3 = tf.concat(3, [self.fcn3_3, self.upscore5_3, self.upscore4_3], name="direction/fuse3")
+        self.fuse3 = tf.concat([self.fcn3_3, self.upscore5_3, self.upscore4_3], 3, name="direction/fuse3")
         self.fuse3_1 = self._conv_layer(self.fuse3, params=self._params["direction/fuse3_1"])
         self.fuse3_2 = self._conv_layer(self.fuse3_1, params=self._params["direction/fuse3_2"])
         self.fuse3_3 = self._conv_layer(self.fuse3_2, params=self._params["direction/fuse3_3"])
@@ -197,7 +197,7 @@ class Network:
                 new_shape = [in_shape[0], h, w, params["outputChannels"]]
             else:
                 new_shape = [shape[0], shape[1], shape[2], params["outputChannels"]]
-                output_shape = tf.pack(new_shape)
+                output_shape = tf.stack(new_shape)
 
                 f_shape = [params["ksize"], params["ksize"], params["outputChannels"], in_features]
 
